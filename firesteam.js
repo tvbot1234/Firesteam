@@ -67,6 +67,9 @@ function compileClass(element) {
     } else if (sc.match(/bg-img-(\w+\.)(png|jpg|jpeg)/)) {
       element.style.backgroundImage = `url(${sc.split("-")[2]})`;
     } else if (sc.match(/oflow-(\w+)/)) element.style.overflow = sc.split("-")[1];
+    else if (sc.match(/b-r-(\d+)(px|rem|em|%)/) {
+      element.style.borderRadius = sc.split("-")[2];
+    }
   });
 } //apply css rules based on class
 let pastMounter = mounter.innerHTML.length;
